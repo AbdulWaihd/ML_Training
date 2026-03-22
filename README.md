@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EstateAI - House Price Prediction
 
-## Getting Started
+EstateAI is a modern web application for predicting house prices in California using a Linear Regression model. This project demonstrates a complete machine learning lifecycle—from data exploration and model training to building a high-performance web interface.
 
-First, run the development server:
+![EstateAI Preview](https://via.placeholder.com/800x450/050505/3b82f6?text=EstateAI+House+Price+Prediction)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Live Demo
+You can deploy this project to Vercel in seconds!
+
+## ✨ Features
+- **Accurate Predictions**: Leverages a Linear Regression model trained on the California Housing dataset.
+- **Premium UI**: Modern dark mode interface with glassmorphism aesthetics.
+- **Real-time API**: Backend powered by Python (Flask) running as Vercel Serverless Functions.
+- **Responsive Design**: Works perfectly on desktops, tablets, and mobile devices.
+
+## 🛠️ Tech Stack
+- **Frontend**: Next.js (TypeScript), React, Vanilla CSS.
+- **Backend**: Python (Flask).
+- **Machine Learning**: Scikit-Learn, NumPy, Pandas.
+- **Deployment**: Vercel.
+
+## 📂 Project Structure
+```text
+house-price-ui/
+├── api/                # Python Serverless Backend
+│   ├── index.py        # Flask API handler
+│   └── model.pkl       # Trained ML Model
+├── app/                # Next.js Frontend (App Router)
+├── public/             # Static Assets
+├── vercel.json         # Vercel Configuration
+└── requirements.txt    # Python Dependencies
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ How to Run Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Prerequisites
+- Node.js (v18+)
+- Python (v3.9+)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Setup and Run
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/AbdulWaihd/ML_Training.git
+   cd house-price-ui
+   ```
 
-## Learn More
+2. **Install Frontend Dependencies**:
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Install Backend Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Run Development Server**:
+   It's recommended to use the [Vercel CLI](https://vercel.com/cli) to run the full stack:
+   ```bash
+   vercel dev
+   ```
+   Or run manually:
+   - Start Backend: `python api/index.py` (Port 5000)
+   - Start Frontend: `npm run dev` (Port 3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚢 Deployment (Vercel)
+1. Push this folder to your GitHub repository.
+2. Link the repository to your [Vercel Dashboard](https://vercel.com).
+3. Vercel will auto-detect the configuration and deploy your app.
 
-## Deploy on Vercel
+## 🎓 About the Machine Learning Model
+The model is a **Linear Regression** algorithm achieving an **R² score of ~0.58** on the California Housing dataset. It considers features such as median income, house age, average rooms, and geographical location to provide a market-aware estimation.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Developed for the **IUST Internship Task 1**.
+© 2026 EstateAI
